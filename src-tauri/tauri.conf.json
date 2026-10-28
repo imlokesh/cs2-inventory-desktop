@@ -1,0 +1,54 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "CS2 Appraiser",
+  "version": "../package.json",
+  "identifier": "com.imlokesh.cs2appraiser",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CS2 Appraiser",
+        "width": 1360,
+        "height": 900,
+        "minWidth": 900,
+        "minHeight": 640,
+        "resizable": true,
+        "center": true,
+        "backgroundColor": "#0a0c10"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug"
+    },
+    "publisher": "Lokesh Sharma",
+    "shortDescription": "CS2 inventory appraiser",
+    "category": "Utility",
+    "copyright": "© 2026 Lokesh Sharma",
+    "homepage": "https://github.com/imlokesh/cs2-inventory-desktop",
+    "longDescription": "Appraise any public CS2 inventory with live Steam Community Market prices, filters, charts and CSV export.",
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}
